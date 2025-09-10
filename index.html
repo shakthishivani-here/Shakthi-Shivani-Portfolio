@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shakthi Shivani G A - Cloud Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F4F8; /* Light silver-blue background */
+            scroll-behavior: smooth;
+        }
+        .crystal-aqua { color: #0A74DA; }
+        .silver-text { color: #718096; }
+        .dark-text { color: #2D3748; }
+        .bg-crystal-aqua { background-color: #0A74DA; }
+        .bg-silver { background-color: #E2E8F0; }
+        .bg-dark { background-color: #1A202C; }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #e0f7fa 0%, #d4eaf7 100%);
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(10, 116, 218, 0.2), 0 4px 6px -2px rgba(10, 116, 218, 0.1);
+        }
+        .skill-tag {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .skill-tag:hover {
+            background-color: #0A74DA;
+            color: white;
+        }
+        .header-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        .border-crystal-aqua {
+            border-color: #0A74DA;
+        }
+
+        /* Animation for sections */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .scroll-animate.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Active nav link style */
+        .nav-active {
+            color: #0A74DA;
+            font-weight: 600;
+        }
+        
+        /* Typed.js cursor */
+        .typed-cursor {
+            color: #0A74DA;
+            font-weight: 200;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 header-shadow">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold dark-text">Shakthi Shivani G A</a>
+            <div class="hidden md:flex space-x-6" id="nav-links">
+                <a href="#about" class="silver-text hover:text-crystal-aqua transition">About</a>
+                <a href="#experience" class="silver-text hover:text-crystal-aqua transition">Experience</a>
+                <a href="#skills" class="silver-text hover:text-crystal-aqua transition">Skills</a>
+                <a href="#projects" class="silver-text hover:text-crystal-aqua transition">Projects</a>
+                <a href="#education" class="silver-text hover:text-crystal-aqua transition">Education</a>
+                <a href="#certifications" class="silver-text hover:text-crystal-aqua transition">Certifications</a>
+                <!-- Add your Google Drive link here -->
+                <a href="https://placehold.co" target="_blank" class="silver-text hover:text-crystal-aqua transition">Gallery</a>
+                <a href="#contact" class="bg-crystal-aqua text-white px-4 py-2 rounded-full hover:opacity-90 transition">Contact</a>
+            </div>
+             <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
+            <a href="#about" class="block py-2 silver-text hover:text-crystal-aqua transition">About</a>
+            <a href="#experience" class="block py-2 silver-text hover:text-crystal-aqua transition">Experience</a>
+            <a href="#skills" class="block py-2 silver-text hover:text-crystal-aqua transition">Skills</a>
+            <a href="#projects" class="block py-2 silver-text hover:text-crystal-aqua transition">Projects</a>
+            <a href="#education" class="block py-2 silver-text hover:text-crystal-aqua transition">Education</a>
+            <a href="#certifications" class="block py-2 silver-text hover:text-crystal-aqua transition">Certifications</a>
+            <!-- Add your Google Drive link here -->
+            <a href="https://placehold.co" target="_blank" class="block py-2 silver-text hover:text-crystal-aqua transition">Gallery</a>
+            <a href="#contact" class="block mt-2 bg-crystal-aqua text-white px-4 py-2 rounded-full hover:opacity-90 transition text-center">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Hero Section -->
+        <section id="about" class="flex flex-col md:flex-row items-center mb-20 md:mb-32 min-h-[80vh]">
+            <div class="md:w-3/5 text-center md:text-left mb-10 md:mb-0">
+                <h1 class="text-5xl md:text-6xl font-bold dark-text mb-2 leading-tight">Shakthi Shivani G A</h1>
+                <p class="text-2xl md:text-3xl font-semibold mb-6 h-10"><span class="crystal-aqua" id="typed"></span></p>
+                <p class="silver-text text-lg mb-8 max-w-xl">
+                    Results-driven Google Cloud certified professional with a proven track record in designing, migrating, and optimizing complex cloud solutions on GCP. Combines a strong analytical background with hands-on expertise in cloud infrastructure, data engineering, and AI/ML deployments.
+                </p>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#contact" class="bg-crystal-aqua text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition shadow-lg">Get in Touch</a>
+                    <a href="https://www.linkedin.com/in/shakthishivani" target="_blank" class="bg-silver text-gray-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-300 transition shadow-lg">LinkedIn</a>
+                </div>
+            </div>
+            <div class="md:w-2/5 flex justify-center">
+                 <!-- NOTE: The image URL below is from LinkedIn and may be temporary.
+                      For long-term reliability, it's recommended to upload this image to a stable hosting service and update the src link. -->
+                 <div class="w-64 h-64 md:w-80 md:h-80 rounded-full shadow-2xl overflow-hidden border-4 border-white">
+                    <img class="h-full w-full object-cover" src="https://media.licdn.com/dms/image/v2/D5635AQHO1vwjtU1M9w/profile-framedphoto-shrink_400_400/B56ZiplHPLHMAg-/0/1755191735594?e=1758146400&v=beta&t=ZXUZBpiimL1vYJBccx1X8sEpLvewQSCg2ANYC2jP0tg" alt="Shakthi Shivani G A">
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="mb-20 md:mb-32 scroll-animate">
+            <h2 class="text-4xl font-bold dark-text text-center mb-12">Professional Experience</h2>
+            <div class="relative border-l-2 border-crystal-aqua ml-4 md:mx-auto max-w-3xl">
+                <!-- Enhub.ai - Program Manager -->
+                <div class="mb-12">
+                    <div class="absolute w-6 h-6 bg-crystal-aqua rounded-full -left-3.5 border-4 border-white"></div>
+                    <div class="pl-10">
+                        <p class="text-sm silver-text">April 2025 - Present</p>
+                        <h3 class="text-2xl font-semibold dark-text">Program Manager</h3>
+                        <p class="font-medium text-gray-600 mb-4">Enhub.ai, Bangalore, India</p>
+                        <ul class="list-disc list-inside silver-text space-y-2">
+                            <li>Spearheaded a critical GCP Specialization audit - Information Security Systems Internation (ISSI), leading a team of over 5 engineers to successfully achieve the Infrastructure Specialization.</li>
+                            <li>Orchestrated cross-functional teams, standardized road maps and templates, reducing project planning time by 40%.</li>
+                            <li>Drove customer engagement and strategy, resulting in 3 official Google Cloud customer success stories for clients like TenX Engage.</li>
+                            <li>Led the company's website revamp project and the creation of new branding materials, including brochures and pitch decks.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Enhub.ai - Associate Cloud Engineer -->
+                <div class="mb-12">
+                    <div class="absolute w-6 h-6 bg-crystal-aqua rounded-full -left-3.5 border-4 border-white"></div>
+                    <div class="pl-10">
+                        <p class="text-sm silver-text">June 2024 - April 2025</p>
+                        <h3 class="text-2xl font-semibold dark-text">Associate Cloud Engineer & GWS Administrator</h3>
+                        <p class="font-medium text-gray-600 mb-4">Enhub.ai, Bangalore, India</p>
+                        <ul class="list-disc list-inside silver-text space-y-2">
+                            <li>Delivered Proof of Concepts (POCs) across Data & Infrastructure migrations, Data Engineering & Analytics, Security & Monitoring, and Application Containerization.</li>
+                            <li>Engineered and executed a high-volume migration of 4.63 TB of data from AWS S3 to Google Cloud Storage.</li>
+                            <li>Spearheaded comprehensive observability implementation for a major IT services client, reducing issue resolution time by 30%.</li>
+                            <li>Designed cloud architectures and created detailed Total Cost of Ownership (TCO) analyses for over 4 clients.</li>
+                            <li>Implemented various O365 to Google Workspace migrations and provided GWS training to clients like Global NTT.</li>
+                            <li>Migrated a >20 GB SQL database for a critical proof-of-concept.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Lady Doak College -->
+                <div class="mb-12">
+                    <div class="absolute w-6 h-6 bg-crystal-aqua rounded-full -left-3.5 border-4 border-white"></div>
+                    <div class="pl-10">
+                        <p class="text-sm silver-text">July 2023 - September 2024</p>
+                        <h3 class="text-2xl font-semibold dark-text">Data Entry Operator Intern</h3>
+                        <p class="font-medium text-gray-600 mb-4">Centre for Information Technology, Lady Doak College</p>
+                        <ul class="list-disc list-inside silver-text space-y-2">
+                           <li>Inputted student and stock data into computer databases with high accuracy and speed.</li>
+                           <li>Reviewed source documents for completeness and correctness prior to data entry.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-20 md:mb-32 scroll-animate">
+            <h2 class="text-4xl font-bold dark-text text-center mb-12">Skills & Expertise</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <h3 class="text-xl font-semibold mb-4 dark-text flex items-center"><i data-lucide="cloud" class="w-6 h-6 mr-3 text-crystal-aqua"></i>Cloud Platforms</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Google Cloud Platform (GCP)</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Amazon Web Services (AWS)</span>
+                    </div>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <h3 class="text-xl font-semibold mb-4 dark-text flex items-center"><i data-lucide="server" class="w-6 h-6 mr-3 text-crystal-aqua"></i>Core Cloud Services</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Compute Engine</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Cloud SQL</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">BigQuery</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Looker</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Vertex AI</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Cloud Storage</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Cloud Operations</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">GKE</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Docker</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">EC2</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">RDS</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Redshift</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <h3 class="text-xl font-semibold mb-4 dark-text flex items-center"><i data-lucide="network" class="w-6 h-6 mr-3 text-crystal-aqua"></i>Networking & API</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">VPC</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Subnetting</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">VPN</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Private Service Connect</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">API Gateway</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Apigee</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <h3 class="text-xl font-semibold mb-4 dark-text flex items-center"><i data-lucide="arrow-right-left" class="w-6 h-6 mr-3 text-crystal-aqua"></i>Migration</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Storage Transfer Service</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">BigQuery Data Transfer Service</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Database Migration Service</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <h3 class="text-xl font-semibold mb-4 dark-text flex items-center"><i data-lucide="database" class="w-6 h-6 mr-3 text-crystal-aqua"></i>Data & Databases</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Datastream</span>
+                         <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Dataflow</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Dataprep</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Airflow</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">MySQL</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">SQL Server</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">3rd party ETL Tools</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <h3 class="text-xl font-semibold mb-4 dark-text flex items-center"><i data-lucide="code" class="w-6 h-6 mr-3 text-crystal-aqua"></i>Programming</h3>
+                    <div class="flex flex-wrap gap-2">
+                         <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Python (NumPy, Pandas, Matplotlib)</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">SQL</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">IaC (Terraform)</span>
+                    </div>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md card-hover lg:col-span-2">
+                    <h3 class="text-xl font-semibold mb-4 dark-text flex items-center"><i data-lucide="users-2" class="w-6 h-6 mr-3 text-crystal-aqua"></i>Soft Skills</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Collaboration</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Communication</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Leadership</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Creativity</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Critical Thinking</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Flexibility</span>
+                        <span class="skill-tag bg-silver text-gray-700 px-3 py-1 rounded-full text-sm">Quick Learning</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-20 md:mb-32 scroll-animate">
+            <h2 class="text-4xl font-bold dark-text text-center mb-12">Personal Project</h2>
+            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden card-hover">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold dark-text mb-3">AI-Powered HRM & ATS Application</h3>
+                    <p class="silver-text mb-6">
+                        Actively developing a full-stack Human Resource Management (HRM) and Applicant Tracking System (ATS) application. This project leverages AI-driven features for resume parsing and intelligent candidate matching to streamline the hiring process.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-crystal-aqua/20 text-crystal-aqua px-3 py-1 rounded-full text-sm font-medium">React</span>
+                        <span class="bg-crystal-aqua/20 text-crystal-aqua px-3 py-1 rounded-full text-sm font-medium">Django</span>
+                        <span class="bg-crystal-aqua/20 text-crystal-aqua px-3 py-1 rounded-full text-sm font-medium">PostgreSQL</span>
+                        <span class="bg-crystal-aqua/20 text-crystal-aqua px-3 py-1 rounded-full text-sm font-medium">AI/ML</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="mb-20 md:mb-32 scroll-animate">
+             <h2 class="text-4xl font-bold dark-text text-center mb-12">Education</h2>
+             <div class="max-w-3xl mx-auto">
+                 <div class="bg-white p-8 rounded-lg shadow-md card-hover mb-6">
+                     <h3 class="text-2xl font-semibold dark-text">Lady Doak College, Madurai</h3>
+                     <p class="font-medium text-gray-600 mb-2">Bachelor of Science, Physics</p>
+                     <p class="silver-text">Completed May 2024</p>
+                 </div>
+                 <div class="bg-white p-8 rounded-lg shadow-md card-hover">
+                     <h3 class="text-2xl font-semibold dark-text">St. Isabels Girls Higher Secondary School, Thanjavur</h3>
+                     <p class="font-medium text-gray-600">Higher Secondary Education (Mathematics & Computer Science)</p>
+                 </div>
+             </div>
+        </section>
+
+         <!-- Certifications & Achievements -->
+        <section id="certifications" class="mb-20 md:mb-32 scroll-animate">
+            <h2 class="text-4xl font-bold dark-text text-center mb-12">Certifications & Achievements</h2>
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold dark-text mb-6 text-center md:text-left">Certifications</h3>
+                    <ul class="space-y-4">
+                        <li class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                            <p class="font-semibold dark-text">Professional Cloud Architect</p>
+                            <p class="text-sm silver-text">Google Cloud</p>
+                        </li>
+                        <li class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                            <p class="font-semibold dark-text">Professional Data Engineer</p>
+                            <p class="text-sm silver-text">Google Cloud</p>
+                        </li>
+                         <li class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                            <p class="font-semibold dark-text">Professional Google Workspace Administrator</p>
+                            <p class="text-sm silver-text">Google Cloud</p>
+                        </li>
+                        <li class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                            <p class="font-semibold dark-text">Google AI Essentials</p>
+                            <p class="text-sm silver-text">Coursera | Issued Aug 2024</p>
+                        </li>
+                         <li class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                            <p class="font-semibold dark-text">Deep Learning</p>
+                            <p class="text-sm silver-text">NPTEL | Issued May 2024</p>
+                        </li>
+                        <li class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                            <p class="font-semibold dark-text">Women in Data</p>
+                            <p class="text-sm silver-text">Learning Links Foundation | Issued Jan 2024</p>
+                        </li>
+                         <li class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                            <p class="font-semibold dark-text">National Cadet Corps C - Certificate</p>
+                            <p class="text-sm silver-text">NATIONAL CADET CORPS - India | Issued Mar 2024</p>
+                        </li>
+                        <li class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                            <p class="font-semibold dark-text">Google Cybersecurity Specialization</p>
+                            <p class="text-sm silver-text">Coursera | Issued Dec 2023</p>
+                        </li>
+                         <li class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                            <p class="font-semibold dark-text">Google Project Management: Specialization</p>
+                            <p class="text-sm silver-text">Coursera | Issued Dec 2023</p>
+                        </li>
+                         <li class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                            <p class="font-semibold dark-text">Google Advanced Data Analytics Specialization</p>
+                            <p class="text-sm silver-text">Coursera | Issued Dec 2023</p>
+                        </li>
+                         <li class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                            <p class="font-semibold dark-text">Google Business Intelligence Specialization</p>
+                            <p class="text-sm silver-text">Coursera | Issued Nov 2023</p>
+                        </li>
+                        <li class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                            <p class="font-semibold dark-text">Google Cloud Computing Foundations</p>
+                            <p class="text-sm silver-text">NPTEL | Issued Nov 2023</p>
+                        </li>
+                        <li class="bg-white p-4 rounded-lg shadow-sm card-hover">
+                            <p class="font-semibold dark-text">Space Science and Technology Awareness Training (START)</p>
+                            <p class="text-sm silver-text">ISRO | Issued Sep 2023</p>
+                        </li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="text-2xl font-semibold dark-text mb-6 text-center md:text-left">Key Achievements</h3>
+                    <ul class="list-none space-y-4">
+                        <li class="bg-white p-4 rounded-lg shadow-sm flex items-start">
+                            <i data-lucide="award" class="w-6 h-6 text-crystal-aqua mr-4 flex-shrink-0 mt-1"></i>
+                            <span>Awarded "Promising Rookie of the Year" (2024) at Enhub.ai.</span>
+                        </li>
+                         <li class="bg-white p-4 rounded-lg shadow-sm flex items-start">
+                             <i data-lucide="award" class="w-6 h-6 text-crystal-aqua mr-4 flex-shrink-0 mt-1"></i>
+                            <span>Ranked Top 1000 in Google Cloud Skill Badge Challenge for Partners.</span>
+                        </li>
+                         <li class="bg-white p-4 rounded-lg shadow-sm flex items-start">
+                             <i data-lucide="award" class="w-6 h-6 text-crystal-aqua mr-4 flex-shrink-0 mt-1"></i>
+                            <span>Recipient of Wipro Earthian 2022 - South Zone Regional Champion.</span>
+                        </li>
+                         <li class="bg-white p-4 rounded-lg shadow-sm flex items-start">
+                            <i data-lucide="award" class="w-6 h-6 text-crystal-aqua mr-4 flex-shrink-0 mt-1"></i>
+                            <span>First Place in ISRO Space Week State Level Quiz.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="text-center gradient-bg py-20 rounded-lg scroll-animate">
+             <h2 class="text-4xl font-bold dark-text mb-4">Let's Connect</h2>
+             <p class="silver-text mb-8 max-w-2xl mx-auto">
+                I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision. Feel free to reach out.
+             </p>
+             <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-8">
+                 <a href="mailto:shakthishivaniga@gmail.com" class="inline-flex items-center bg-white text-gray-700 px-6 py-3 rounded-full font-bold text-lg hover:shadow-xl hover:bg-gray-50 transition shadow-lg">
+                    <i data-lucide="mail" class="w-5 h-5 mr-3"></i>
+                    shakthishivaniga@gmail.com
+                 </a>
+                 <div class="inline-flex items-center dark-text font-semibold text-lg">
+                    <i data-lucide="phone" class="w-5 h-5 mr-3"></i>
+                    +91 9342955181
+                 </div>
+                 <div class="inline-flex items-center dark-text font-semibold text-lg">
+                    <i data-lucide="map-pin" class="w-5 h-5 mr-3"></i>
+                    Bangalore, India
+                 </div>
+             </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-6">
+        <p class="silver-text text-sm">&copy; 2025 Shakthi Shivani G A. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinksContainer = document.getElementById('nav-links');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Typed.js Animation
+            new Typed('#typed', {
+                strings: ['Cloud & AI Innovator.', 'Program Manager.', 'Data Engineer.'],
+                typeSpeed: 50,
+                backSpeed: 30,
+                loop: true,
+                smartBackspace: true,
+            });
+
+            // Scroll Animations
+            const animatedElements = document.querySelectorAll('.scroll-animate');
+            const scrollObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animatedElements.forEach(el => {
+                scrollObserver.observe(el);
+            });
+            
+            // Nav link highlighting on scroll
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('#nav-links a');
+
+            const navObserverOptions = {
+                rootMargin: '-40% 0px -60% 0px',
+            };
+
+            const navObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.remove('nav-active');
+                            // We check for href containing the id, which works for the contact button too
+                            if (link.getAttribute('href').includes(id)) {
+                                link.classList.add('nav-active');
+                            }
+                        });
+                    }
+                });
+            }, navObserverOptions);
+
+            sections.forEach(section => {
+                navObserver.observe(section);
+            });
+
+            // Initialize Lucide Icons
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
+
